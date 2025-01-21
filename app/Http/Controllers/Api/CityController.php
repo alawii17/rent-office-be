@@ -17,7 +17,7 @@ class CityController extends Controller
 
     public function show(City $city)
     {
-        $city->load(['officeSpaces.city', 'officeSpaces.photo']);
+        $city->load(['officeSpaces.city', 'officeSpaces.photos']);
         $city->loadCount('officeSpaces');
         return new CityResource($city);
     }
